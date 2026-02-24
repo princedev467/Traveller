@@ -1,0 +1,804 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    /* font-size: 10px; */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Poppins';
+}
+
+.container {
+    width: 95%;
+    margin: 0 auto;
+
+}
+
+/*--------header-------- */
+header {
+    position: fixed;
+    top: 2rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header .container {
+    display: flex;
+
+    align-items: center;
+}
+
+header nav {
+    margin-left: auto;
+}
+
+header nav ul {
+    display: flex;
+}
+
+header ul li a {
+    color: white;
+    z-index: 999;
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0 3.3rem;
+}
+
+header ul li a i {
+    margin-left: 0.5rem;
+}
+
+header .search {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 3.3rem;
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+section {
+    margin-top: 15rem;
+}
+
+.col-1 {
+    width: 8.33%;
+}
+
+.col-2 {
+    width: 16.67%;
+}
+
+.col-3 {
+    width: 25.00%;
+}
+
+.col-4 {
+    width: 33.33%;
+
+}
+
+.col-5 {
+    width: 41.67%;
+}
+
+.col-6 {
+    width: 50.00%;
+}
+
+.col-7 {
+    width: 58.33%;
+}
+
+.col-8 {
+    width: 66.67%;
+}
+
+.col-9 {
+    width: 75.00%;
+}
+
+.col-10 {
+    width: 83.33%;
+}
+
+.col-11 {
+    width: 91.67%;
+}
+
+.col-12 {
+    width: 100.00%;
+}
+
+/*------------------Hero-------------------- */
+#hero {
+    margin-top: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url(/assets/image/hero-bg.jpg);
+}
+
+#hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    /* background-color: rgba(0, 0,0, 0.3); */
+}
+
+.herodata {
+    position: relative;
+    padding-top: 15%;
+    max-width: 69.6rem;
+    z-index: 999;
+}
+
+.herodata h1 {
+    color: white;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 9rem;
+}
+
+.herodata p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #cfcfcf;
+    max-width: 43.6rem;
+    margin: 2.6rem 0 1.1rem 2rem;
+}
+
+.expForm {
+    margin-top: 3rem;
+    max-width: 73rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.4);
+
+}
+
+.expForm select {
+    border: none;
+    color: gray;
+    font-size: 1.8rem;
+    font-weight: 600;
+    font-family: 'Poppins';
+    outline: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #000000;
+    color: white;
+    border-radius: 3rem;
+    padding: 1.5rem 2.2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+}
+
+
+.pop {
+    color: white;
+}
+
+
+/*------------------------------------------ */
+
+
+/*------------------About Us-------------------- */
+#About .container {
+    margin-bottom: 3rem;
+}
+
+.aboutdata {
+    margin: 0 2.8rem;
+    text-align: center;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.sub-title {
+
+    margin: 2rem auto;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #cfcfcf;
+    width: 67.6rem;
+    text-align: center;
+    margin-bottom: 6rem;
+
+}
+
+.aboutdetail img {
+    width: 8.26rem;
+
+
+}
+
+.aboutdetail p {
+    margin: 1rem auto;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #cfcfcf;
+}
+
+.aboutdetail h4 {
+    text-align: center;
+    font-size: 4.8rem;
+    font-weight: 550;
+}
+
+/*------------------------------------------ */
+
+
+/*------------------founder info-------------------- */
+
+.fimage {
+    height: 54.9rem;
+    width: 55.7rem;
+
+}
+
+.fimage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 9rem 0 9rem 0;
+}
+
+.fdetail img {
+    margin-bottom: 3rem;
+    /* width: 100%;
+    height: 100%;
+    object-fit: cover; */
+}
+
+.fdetail p {
+    margin: 5rem 0;
+
+    /* text-align: center; */
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: black;
+}
+
+.fdetail h5 {
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+.fdetail h6 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: gray;
+}
+
+/*------------------------------------------ */
+
+
+/*------------------Package-------------------- */
+.popular {
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.popular h4 {
+    font-size: 6rem;
+    font-weight: 600;
+
+}
+
+.popular p {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: gray;
+    margin-top: 1.4rem;
+
+}
+
+.popular div:last-child {
+    text-align: right;
+}
+
+.btn2 {
+    font-size: 1.6rem;
+}
+
+.pack-detail img {
+    height: 44.4rem;
+    width: 100%;
+    background-color: gray;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.pop-pack {
+    row-gap: 2.8rem;
+    margin-top: 6.6rem;
+
+}
+
+.pack-detail {
+    margin: 0 0.9rem;
+    box-shadow: 0 0px 20px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1rem;
+}
+
+.pack-data {
+    padding: 3rem 2.6rem;
+}
+
+.name {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 2.8rem;
+}
+
+.name h5 {
+    font-size: 2.4rem;
+    font-weight: 600;
+}
+
+.name p {
+    color: gray;
+    font-size: 2.4rem;
+}
+
+.pack-data .desc {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2.7rem;
+    margin-bottom: 3.4rem;
+    color: gray;
+}
+
+.inquiry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inquiry .star {
+    color: #F4bc61;
+    font-size: 2rem;
+}
+
+
+/*------------------------------------------ */
+
+
+/*------------------Destination-------------------- */
+
+#Destination {
+    margin-bottom: 10rem;
+}
+
+#Destination .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+#Destination .dest-data {
+    text-align: center;
+    font-size: 18px;
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+.dest-data:hover {
+    transform: translateY(-1rem);
+}
+
+.dest-data:hover .dest-detail {
+    box-shadow: 0px 0px 20px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.dest-data:hover img {
+    border-radius: 1rem 1rem 0 0;
+}
+
+#Destination .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 31.3rem;
+
+    object-fit: cover;
+}
+
+#Destination .swiper-wrapper {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#Destination .swiper-button-next,
+#Destination .swiper-button-prev {
+    top: 2rem;
+    color: #737373;
+    width: 6.8rem;
+    height: 6.8rem;
+    box-shadow: 0 8px 50px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+}
+
+#Destination .swiper-button-next:after,
+#Destination .swiper-button-prev:after {
+    font-size: 3.5rem;
+}
+
+.dest-detail {
+    padding: 3rem 1.8rem 2.6rem 1.3rem;
+}
+
+.dest-detail h5 {
+    font-weight: 600;
+    font-size: 2.4rem;
+
+}
+
+.dest-detail p {
+    padding: 6.77 0;
+    font-weight: 500;
+    font-size: 1.4rem;
+    color: gray;
+}
+
+.circle {
+    width: 7.83rem;
+    height: 7.55rem;
+    box-shadow: 0 4px 31px 0 rgba(0, 0, 0, 0.14);
+    font-size: 7.2rem;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: left;
+}
+
+.destslider img {
+    width: 100%;
+    background-color: gray;
+    border-radius: 1rem;
+}
+
+.circle {
+    position: absolute;
+    top: -3rem;
+    right: 0.7rem;
+    text-align: center;
+}
+
+.dest-detail {
+    content: "";
+
+    position: relative;
+
+    opacity: 0;
+    width: 100%;
+
+    text-align: left;
+
+
+}
+
+.dest-data:hover .dest-detail {
+    opacity: 1;
+}
+
+/*------------------------------------------ */
+
+
+/*------------------blog-------------------- */
+.story-image img {
+    width: 100%;
+    height: 67.9rem;
+    object-fit: cover;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.tips {
+
+    /* row-gap: 5.8rem; */
+    margin: 0 rem 5.8rem 0;
+    box-shadow: 0 4px 4rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.tips h6 {
+
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.tips h5 {
+    margin: 2.4rem 0;
+    font-size: 3.6rem;
+    font-weight: 500;
+}
+
+.tips p {
+
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: gray;
+}
+
+.btn4 {
+    margin: 5.8rem 0 3.2rem 2.6rem;
+}
+
+.stories {
+    box-shadow: 0 4px 4rem 0 rgba(0, 0, 0, 0.25);
+}
+
+.stories h6 {
+
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.trow {
+    margin: 0 2.9rem 0 0;
+    row-gap: 5.8rem;
+}
+
+.stories h5 {
+    margin: 1rem 0;
+    font-size: 3.6rem;
+    font-weight: 500;
+}
+
+.stories p {
+    margin: 1.1rem 6.2rem 0 0.4rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: gray;
+}
+
+.btn5 {
+    margin: 8.3rem 0 3.7rem 0;
+}
+
+.tips {
+    padding: 1.2rem 1.8rem 2.1rem 2.6rem;
+    /* margin: 0 0 5.6rem 0; */
+    border-radius: 1rem;
+}
+
+.story-data {
+    padding: 1.2rem 6.2rem 3.7rem 6rem;
+}
+
+.stories {
+    border-radius: 1rem;
+    margin: 0 0rem 0rem 2.9rem;
+}
+
+/*------------------------------------------ */
+
+
+/*------------------Touch-------------------- */
+.form1 {
+    box-shadow: 0 4px 4rem 0 rgba(0, 0, 0, 0.25);
+    padding: 7.5rem 4.1rem 7.4rem;
+    margin-right: 5.25rem;
+    border-radius: 1rem;
+}
+
+.form1 input {
+    outline: none;
+    width: 100%;
+    padding: 1.3rem 0 1.2rem 1.9rem;
+    margin: 0 0 2rem 0;
+    font-size: 1.8rem;
+
+}
+
+.form1 textarea {
+    outline: none;
+    width: 100%;
+    padding: 2.5rem 0 2.5rem 1.9rem;
+    margin: 0 0 2rem 0;
+    font-size: 1.8rem;
+
+}
+
+.codata {
+    margin: 0 0 0 5.25rem;
+
+}
+
+.codata h4 {
+    font-size: 6rem;
+    font-weight: 600;
+}
+
+.codata p {
+    color: gray;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.codetail h6 {
+    font-size: 2.4rem;
+    font-weight: 400;
+}
+
+.corow a {
+    display: block;
+    color: black;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+}
+
+.btn6 {
+    padding: 0.8rem 13.4rem 0.7rem 12.8rem;
+}
+
+.corow i {
+
+    font-size: 1.8rem;
+    margin-right: 2.4rem;
+    line-height: 2.9rem;
+}
+
+.corow {
+    margin-top: 4.7rem;
+    row-gap: 4.7rem;
+}
+
+
+
+/*------------------------------------------ */
+
+
+/*------------------Subcribe-------------------- */
+.subForm {
+    margin-top: 3rem;
+    width: 50%;
+    background-color: white;
+    padding: 1rem 1rem 1rem 4rem;
+    border-radius: 4rem;
+    display: flex;
+    justify-content: space-between;
+
+    border: none;
+    box-shadow: 0 3rem 3rem 0 rgba(0, 0, 0, 0.4);
+    outline: none;
+}
+
+.stitle {
+    color: white;
+}
+
+.subForm input {
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 500;
+    outline: none;
+}
+
+#Subcribe {
+    padding: 11.7rem 0;
+    background-image: url(/assets/image/bg3.jpg);
+    background-size: cover;
+}
+
+.subdata {
+    display: flex;
+    justify-content: center;
+
+}
+
+#Subcribe h3 {
+    color: white;
+}
+
+#Subcribe p {
+    color: gray;
+}
+
+/*------------------------------------------ */
+
+
+/*------------------footer-------------------- */
+
+.coinfo {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: space-between;
+}
+
+.footrow a {
+    display: inline-block;
+}
+
+.footrow img {
+    width: 30rem;
+}
+.coinfo{
+justify-content: center;
+    
+}
+.coinfo h5 {
+    font-size: 3rem;
+    font-weight: 600;
+    row-gap: 12.7rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.coinfo ul li {
+    line-height: 3.5rem;
+}
+
+.coinfo ul li a {
+
+    font-size: 2.4rem;
+    font-weight: 500;
+    color: gray;
+    row-gap: 9rem;
+
+}
+
+.coinfo ul li a i {
+    color: rgb(81, 78, 78);
+    margin-right: 1.4rem;
+}
+
+.footrow {
+    display: flex;
+    margin: 6.1rem 0;
+    
+}
+
+.appicon i {
+
+    color: rgb(81, 78, 78);
+}
+
+.appicon {
+    margin-top: 1rem;
+    gap: 1.6rem;
+    display: flex;
+    font-size: 2.4rem;
+}
+
+
+.job-register {
+    margin: 2.9rem 0 0 0;
+    padding: 2.9rem;
+    color: white;
+    width: 100%;
+    background-color: #000000;
+    justify-content: center;
+    text-align: center;
+}
+
+.job-register p {
+    font-size: 1.8rem;
+}
