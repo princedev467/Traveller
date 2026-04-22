@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Blog — Travosca</title>
+  <meta name="description" content="Read travel stories, tips, and guides from the Travosca community. Get inspired for your next adventure.">
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/font.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <style>
+    .blog-hero-card {
+      border-radius: var(--radius); overflow: hidden;
+      position: relative; height: 52rem; margin-bottom: 5rem;
+      box-shadow: var(--shadow); cursor: pointer;
+    }
+    .blog-hero-card img { width:100%; height:100%; object-fit:cover; transition: transform 0.6s ease; }
+    .blog-hero-card:hover img { transform: scale(1.04); }
+    .blog-hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.88) 0%, rgba(0,0,0,0.05) 60%);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 4rem;
+    }
+    .blog-hero-overlay .blog-tag { font-size: 1.4rem; padding: 0.5rem 1.5rem; margin-bottom: 1.5rem; }
+    .blog-hero-overlay h2 { font-size: 4rem; font-weight: 700; color: #fff; margin-bottom: 1.2rem; line-height: 1.3; }
+    .blog-hero-overlay p { font-size: 1.6rem; color: rgba(255,255,255,0.78); max-width: 65rem; margin-bottom: 2.5rem; }
+    .blog-meta-white { display:flex; gap:2rem; color:rgba(255,255,255,0.65); font-size:1.35rem; margin-bottom: 2rem; }
+    .blog-meta-white i { color: var(--accent); }
+    .sidebar { position: sticky; top: 10rem; }
+    .sidebar-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 3rem; box-shadow: 0 4px 20px rgba(0,0,0,0.08); margin-bottom: 3rem;
+    }
+    .sidebar-card h4 { font-size: 2rem; font-weight: 700; margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 2px solid var(--accent); }
+    .sidebar-post { display:flex; gap:1.5rem; align-items:flex-start; margin-bottom:2rem; padding-bottom:2rem; border-bottom: 1px solid #eee; }
+    .sidebar-post:last-child { margin-bottom:0; padding-bottom:0; border-bottom:none; }
+    .sidebar-post img { width:7rem; height:7rem; object-fit:cover; border-radius:0.8rem; flex-shrink:0; }
+    .sidebar-post-text h6 { font-size:1.5rem; font-weight:600; line-height:1.4; margin-bottom:0.5rem; }
+    .sidebar-post-text span { font-size:1.3rem; color:var(--gray); }
+    .tag-cloud { display:flex; flex-wrap:wrap; gap:1rem; }
+    .tag-cloud a {
+      padding: 0.6rem 1.5rem; background: #f3f4f6; border-radius:3rem;
+      font-size:1.3rem; color:var(--gray); transition:var(--transition);
+    }
+    .tag-cloud a:hover { background:var(--accent); color:var(--dark); }
+    .blog-main-grid { display:grid; grid-template-columns: 2fr 1fr; gap:5rem; align-items:start; }
+    .blog-list { display:flex; flex-direction:column; gap:3rem; }
+    .blog-list-card {
+      border-radius:var(--radius); overflow:hidden;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08); background:#fff;
+      display:grid; grid-template-columns:1fr 1fr; transition:var(--transition);
+    }
+    .blog-list-card:hover { transform:translateY(-0.5rem); box-shadow:var(--shadow); }
+    .blog-list-card img { width:100%; height:100%; object-fit:cover; min-height:20rem; }
+    .blog-list-body { padding:3rem; display:flex; flex-direction:column; justify-content:center; }
+    .blog-list-body .blog-tag { margin-bottom:1rem; }
+    .blog-list-body h5 { font-size:2.2rem; font-weight:700; margin-bottom:1rem; line-height:1.4; }
+    .blog-list-body p { font-size:1.45rem; color:var(--gray); line-height:1.8; margin-bottom:2rem; }
+    .blog-meta { display:flex; gap:1.5rem; color:var(--gray); font-size:1.3rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+    .blog-meta i { color:var(--accent); }
+    @media(max-width:992px) {
+      .blog-main-grid { grid-template-columns:1fr; }
+      .sidebar { position:static; }
+    }
+    @media(max-width:768px) {
+      .blog-list-card { grid-template-columns:1fr; }
+      .blog-hero-overlay h2 { font-size:3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <header id="header" class="scrolled">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/image/Logo.png" alt="Travosca Logo"></a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="packages.html">Package <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="destinations.html">Destination <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="blog.html" class="active">Blog <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero" style="background-image: url('assets/image/blog.jpg');">
+      <div class="page-hero-content">
+        <h1>Travel Blog</h1>
+        <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>Blog</p>
+      </div>
+    </div>
+
+    <!-- FEATURED ARTICLE -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <h3 class="main-title">Featured <span>Article</span></h3>
+        <p class="sub-title">Our editors' top pick — a story that will inspire your next great adventure.</p>
+        <div class="blog-hero-card">
+          <img src="assets/image/blog.jpg" alt="Travel Stories For Now and the Future">
+          <div class="blog-hero-overlay">
+            <span class="blog-tag">Stories · Travel</span>
+            <div class="blog-meta-white">
+              <span><i class="fa-regular fa-calendar"></i> April 15, 2025</span>
+              <span><i class="fa-regular fa-user"></i> Siti Sarah</span>
+              <span><i class="fa-regular fa-clock"></i> 8 min read</span>
+            </div>
+            <h2>Travel Stories For Now and the Future</h2>
+            <p>What does travel look like in a changing world? We explore how modern travellers are redefining exploration — slower, deeper, and more meaningful than ever before.</p>
+            <a href="#" class="btn btn-outline">Read Full Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG GRID WITH SIDEBAR -->
+    <section class="section" style="background: var(--light);">
+      <div class="container">
+        <div class="blog-main-grid">
+
+          <!-- Articles List -->
+          <div>
+            <h3 class="main-title" style="text-align:left; margin-bottom:3rem;">Latest <span>Articles</span></h3>
+            <div class="blog-list">
+
+              <div class="blog-list-card">
+                <img src="assets/image/pari-blog.jpg" alt="Paris Travel Guide">
+                <div class="blog-list-body">
+                  <span class="blog-tag">Europe · Tips</span>
+                  <div class="blog-meta">
+                    <span><i class="fa-regular fa-calendar"></i> Mar 28, 2025</span>
+                    <span><i class="fa-regular fa-clock"></i> 6 min</span>
+                  </div>
+                  <h5>9 Insider Tips for First-Time Visitors to Paris</h5>
+                  <p>Skip the tourist traps and discover the real Paris — secret gardens, hidden bistros, and locals-only viewpoints that most visitors miss.</p>
+                  <a href="#" class="btn">Read More</a>
+                </div>
+              </div>
+
+              <div class="blog-list-card">
+                <img src="assets/image/bali.jpg" alt="Bali Guide">
+                <div class="blog-list-body">
+                  <span class="blog-tag">Asia · Guide</span>
+                  <div class="blog-meta">
+                    <span><i class="fa-regular fa-calendar"></i> Mar 10, 2025</span>
+                    <span><i class="fa-regular fa-clock"></i> 7 min</span>
+                  </div>
+                  <h5>The Ultimate Bali Travel Guide for 2025</h5>
+                  <p>Everything you need to know before your Bali trip — the best areas to stay, must-try foods, sacred temples, and how to travel sustainably.</p>
+                  <a href="#" class="btn">Read More</a>
+                </div>
+              </div>
+
+              <div class="blog-list-card">
+                <img src="assets/image/swiss.jpg" alt="Switzerland Alps">
+                <div class="blog-list-body">
+                  <span class="blog-tag">Europe · Adventure</span>
+                  <div class="blog-meta">
+                    <span><i class="fa-regular fa-calendar"></i> Feb 20, 2025</span>
+                    <span><i class="fa-regular fa-clock"></i> 5 min</span>
+                  </div>
+                  <h5>Swiss Alps on a Budget — Is It Actually Possible?</h5>
+                  <p>Switzerland has a reputation for being expensive, but with the right planning you can experience the Alps without breaking the bank. Here's how.</p>
+                  <a href="#" class="btn">Read More</a>
+                </div>
+              </div>
+
+              <div class="blog-list-card">
+                <img src="assets/image/thiablog.jpg" alt="Thailand Guide">
+                <div class="blog-list-body">
+                  <span class="blog-tag">Asia · Tips</span>
+                  <div class="blog-meta">
+                    <span><i class="fa-regular fa-calendar"></i> Jan 15, 2025</span>
+                    <span><i class="fa-regular fa-clock"></i> 9 min</span>
+                  </div>
+                  <h5>How Are We Going to Travel in 2025?</h5>
+                  <p>From slow travel and eco-tourism to AI-powered itineraries — the future of travel is here and it's more exciting (and responsible) than ever before.</p>
+                  <a href="#" class="btn">Read More</a>
+                </div>
+              </div>
+
+              <div class="blog-list-card">
+                <img src="assets/image/singa-blog.jpg" alt="Singapore">
+                <div class="blog-list-body">
+                  <span class="blog-tag">Asia · City Guide</span>
+                  <div class="blog-meta">
+                    <span><i class="fa-regular fa-calendar"></i> Jan 5, 2025</span>
+                    <span><i class="fa-regular fa-clock"></i> 5 min</span>
+                  </div>
+                  <h5>48 Hours in Singapore: The Perfect Weekend Guide</h5>
+                  <p>Just 48 hours? No problem. Here's exactly how to spend a weekend in Singapore — from Marina Bay at sunrise to a hawker centre feast at midnight.</p>
+                  <a href="#" class="btn">Read More</a>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <div class="sidebar-card">
+              <h4>Recent Posts</h4>
+              <div class="sidebar-post">
+                <img src="assets/image/bali.jpg" alt="Bali">
+                <div class="sidebar-post-text">
+                  <h6>The Ultimate Bali Travel Guide 2025</h6>
+                  <span>March 10, 2025</span>
+                </div>
+              </div>
+              <div class="sidebar-post">
+                <img src="assets/image/pari-blog.jpg" alt="Paris">
+                <div class="sidebar-post-text">
+                  <h6>9 Insider Tips for First-Time Visitors to Paris</h6>
+                  <span>March 28, 2025</span>
+                </div>
+              </div>
+              <div class="sidebar-post">
+                <img src="assets/image/swiss.jpg" alt="Switzerland">
+                <div class="sidebar-post-text">
+                  <h6>Swiss Alps on a Budget</h6>
+                  <span>February 20, 2025</span>
+                </div>
+              </div>
+              <div class="sidebar-post">
+                <img src="assets/image/singa-blog.jpg" alt="Singapore">
+                <div class="sidebar-post-text">
+                  <h6>48 Hours in Singapore</h6>
+                  <span>January 5, 2025</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="sidebar-card">
+              <h4>Categories</h4>
+              <ul style="display:flex; flex-direction:column; gap:1rem;">
+                <li style="display:flex; justify-content:space-between; font-size:1.5rem; padding:0.8rem 0; border-bottom:1px solid #eee;">
+                  <a href="#" style="color:var(--gray); transition:var(--transition);">Travel Tips</a><span style="color:var(--accent); font-weight:700;">12</span>
+                </li>
+                <li style="display:flex; justify-content:space-between; font-size:1.5rem; padding:0.8rem 0; border-bottom:1px solid #eee;">
+                  <a href="#" style="color:var(--gray);">Destination Guides</a><span style="color:var(--accent); font-weight:700;">8</span>
+                </li>
+                <li style="display:flex; justify-content:space-between; font-size:1.5rem; padding:0.8rem 0; border-bottom:1px solid #eee;">
+                  <a href="#" style="color:var(--gray);">Travel Stories</a><span style="color:var(--accent); font-weight:700;">15</span>
+                </li>
+                <li style="display:flex; justify-content:space-between; font-size:1.5rem; padding:0.8rem 0; border-bottom:1px solid #eee;">
+                  <a href="#" style="color:var(--gray);">Food &amp; Culture</a><span style="color:var(--accent); font-weight:700;">6</span>
+                </li>
+                <li style="display:flex; justify-content:space-between; font-size:1.5rem; padding:0.8rem 0;">
+                  <a href="#" style="color:var(--gray);">Budget Travel</a><span style="color:var(--accent); font-weight:700;">9</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card">
+              <h4>Popular Tags</h4>
+              <div class="tag-cloud">
+                <a href="#">#Bali</a><a href="#">#Paris</a><a href="#">#Asia</a>
+                <a href="#">#Europe</a><a href="#">#Budget</a><a href="#">#Solo</a>
+                <a href="#">#Family</a><a href="#">#Eco</a><a href="#">#Thailand</a>
+                <a href="#">#Singapore</a><a href="#">#2025</a>
+              </div>
+            </div>
+
+            <div class="sidebar-card" style="background:var(--dark); border-radius:var(--radius); text-align:center;">
+              <h4 style="color:#fff; border-color:var(--accent);">Get Travel Tips</h4>
+              <p style="font-size:1.45rem; color:rgba(255,255,255,0.65); margin-bottom:2rem; line-height:1.7;">
+                Subscribe to receive weekly travel inspiration and exclusive deals.
+              </p>
+              <form style="display:flex; flex-direction:column; gap:1rem;">
+                <input type="email" placeholder="Your email" style="padding:1.2rem 1.5rem; border-radius:0.8rem; border:none; outline:none; font-size:1.5rem; font-family:'Poppins',sans-serif;">
+                <button type="submit" class="btn btn-gold" style="width:100%;">Subscribe Now</button>
+              </form>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="Subcribe">
+      <div class="container">
+        <h3>Never Miss a Story</h3>
+        <p class="sub-title stitle">Join 12,000+ travel lovers who get our weekly newsletter with the best stories, tips, and deals.</p>
+        <div class="subdata">
+          <form action="" class="subForm">
+            <input type="email" name="email" placeholder="Enter your email address">
+            <input type="submit" value="Subscribe" class="btn">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/image/logo2.png" alt="Travosca" class="footer-brand-logo">
+          <p>We believe travel is the best investment you can make in yourself. Let us plan your next unforgettable adventure.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Top Destinations</h5>
+          <ul>
+            <li><a href="destinations.html">Bali, Indonesia</a></li>
+            <li><a href="destinations.html">Paris, France</a></li>
+            <li><a href="destinations.html">Switzerland</a></li>
+            <li><a href="destinations.html">Thailand</a></li>
+            <li><a href="destinations.html">Singapore</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact Info</h5>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i>732 Despard St, Atlanta</a></li>
+            <li><a href="#"><i class="fa-solid fa-phone"></i>+97 888 8888</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i>info@travosca.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2025 <span>Travosca</span>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const h = document.getElementById('header');
+      if(window.scrollY > 60) h.classList.add('scrolled'); else h.classList.remove('scrolled');
+    });
+  </script>
+</body>
+</html>

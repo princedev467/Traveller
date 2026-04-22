@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Packages — Travosca</title>
+  <meta name="description" content="Browse Travosca's curated travel packages. From budget-friendly getaways to luxury escapes, find the perfect trip for you.">
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/font.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <style>
+    .filter-tabs { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; justify-content: center; }
+    .filter-tab {
+      padding: 0.9rem 2.5rem; border-radius: 5rem; font-size: 1.5rem; font-weight: 600;
+      border: 2px solid #e5e7eb; cursor: pointer; transition: var(--transition);
+      background: #fff; color: var(--gray); font-family: 'Poppins', sans-serif;
+    }
+    .filter-tab:hover, .filter-tab.active {
+      background: var(--dark); color: var(--white); border-color: var(--dark);
+    }
+    .pack-badge-label {
+      position: absolute; top: 1.5rem; left: 1.5rem;
+      background: var(--accent); color: var(--dark); font-size: 1.2rem;
+      font-weight: 700; padding: 0.4rem 1.2rem; border-radius: 3rem; z-index: 1;
+    }
+    .pack-detail { position: relative; }
+    .duration-badge {
+      position: absolute; top: 1.5rem; right: 1.5rem;
+      background: rgba(0,0,0,0.6); color: #fff; font-size: 1.2rem;
+      font-weight: 600; padding: 0.4rem 1.2rem; border-radius: 3rem; z-index: 1;
+    }
+    .pack-includes { display: flex; gap: 1.5rem; margin-bottom: 2rem; }
+    .pack-includes span { font-size: 1.3rem; color: var(--gray); display: flex; align-items: center; gap: 0.5rem; }
+    .pack-includes i { color: var(--accent); }
+    .deals-banner {
+      background: linear-gradient(135deg, #f4a81d, #ff6b35);
+      border-radius: var(--radius); padding: 5rem 4rem;
+      text-align: center; color: var(--dark); margin-top: 5rem;
+    }
+    .deals-banner h3 { font-size: 3.6rem; font-weight: 700; margin-bottom: 1rem; }
+    .deals-banner p { font-size: 1.7rem; margin-bottom: 3rem; opacity: 0.85; }
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <header id="header" class="scrolled">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/image/Logo.png" alt="Travosca Logo"></a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="packages.html" class="active">Package <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="destinations.html">Destination <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="blog.html">Blog <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero" style="background-image: url('assets/image/swiss.jpg');">
+      <div class="page-hero-content">
+        <h1>Travel Packages</h1>
+        <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>Packages</p>
+      </div>
+    </div>
+
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <h3 class="main-title">Our <span>Packages</span></h3>
+        <p class="sub-title">From short city breaks to epic multi-week adventures — there's a Travosca package for every kind of traveller.</p>
+
+        <div class="filter-tabs">
+          <button class="filter-tab active">All</button>
+          <button class="filter-tab">Asia</button>
+          <button class="filter-tab">Europe</button>
+          <button class="filter-tab">Budget</button>
+          <button class="filter-tab">Luxury</button>
+          <button class="filter-tab">Family</button>
+        </div>
+
+        <div class="pop-pack">
+          <div class="pack-detail">
+            <span class="pack-badge-label">🔥 Popular</span>
+            <span class="duration-badge">2 Days</span>
+            <img src="assets/image/paris.jpg" alt="Paris">
+            <div class="pack-data">
+              <div class="name"><h5>Paris, France</h5><p>$299</p></div>
+              <div class="pack-includes">
+                <span><i class="fa-solid fa-plane"></i>Flight</span>
+                <span><i class="fa-solid fa-hotel"></i>Hotel</span>
+                <span><i class="fa-solid fa-utensils"></i>Meals</span>
+              </div>
+              <p class="desc">Walk along the Seine, visit the Louvre, and savour world-class French cuisine in the City of Light.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="contact.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pack-detail">
+            <span class="pack-badge-label">⭐ Top Rated</span>
+            <span class="duration-badge">3 Days</span>
+            <img src="assets/image/swiss.jpg" alt="Switzerland">
+            <div class="pack-data">
+              <div class="name"><h5>Switzerland</h5><p>$499</p></div>
+              <div class="pack-includes">
+                <span><i class="fa-solid fa-plane"></i>Flight</span>
+                <span><i class="fa-solid fa-hotel"></i>Hotel</span>
+                <span><i class="fa-solid fa-person-hiking"></i>Guided</span>
+              </div>
+              <p class="desc">Alpine meadows, glacier lakes, and charming villages — Switzerland is the jewel of Europe.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="contact.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pack-detail">
+            <span class="pack-badge-label">💚 Eco</span>
+            <span class="duration-badge">3 Days</span>
+            <img src="assets/image/thiland.jpg" alt="Thailand">
+            <div class="pack-data">
+              <div class="name"><h5>Thailand</h5><p>$199</p></div>
+              <div class="pack-includes">
+                <span><i class="fa-solid fa-plane"></i>Flight</span>
+                <span><i class="fa-solid fa-hotel"></i>Hotel</span>
+                <span><i class="fa-solid fa-utensils"></i>Meals</span>
+              </div>
+              <p class="desc">Golden temples, tropical jungles, pristine islands, and the warmest hospitality in the world.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="contact.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pack-detail">
+            <span class="duration-badge">3 Days</span>
+            <img src="assets/image/taiwan.jpg" alt="Taiwan">
+            <div class="pack-data">
+              <div class="name"><h5>Taiwan</h5><p>$249</p></div>
+              <div class="pack-includes">
+                <span><i class="fa-solid fa-plane"></i>Flight</span>
+                <span><i class="fa-solid fa-hotel"></i>Hotel</span>
+                <span><i class="fa-solid fa-utensils"></i>Meals</span>
+              </div>
+              <p class="desc">Night markets, mountain hot springs, and a culture that seamlessly blends ancient and modern.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-regular fa-star star"></i>
+                </div>
+                <a href="contact.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pack-detail">
+            <span class="pack-badge-label">🌟 New</span>
+            <span class="duration-badge">5 Days</span>
+            <img src="assets/image/indonasia.jpg" alt="Indonesia">
+            <div class="pack-data">
+              <div class="name"><h5>Indonesia</h5><p>$179</p></div>
+              <div class="pack-includes">
+                <span><i class="fa-solid fa-plane"></i>Flight</span>
+                <span><i class="fa-solid fa-hotel"></i>Hotel</span>
+                <span><i class="fa-solid fa-water"></i>Diving</span>
+              </div>
+              <p class="desc">From Bali's rice terraces to Komodo's dragons — Indonesia is an adventure like no other.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="contact.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pack-detail">
+            <span class="duration-badge">3 Days</span>
+            <img src="assets/image/singapore.jpg" alt="Singapore">
+            <div class="pack-data">
+              <div class="name"><h5>Singapore</h5><p>$349</p></div>
+              <div class="pack-includes">
+                <span><i class="fa-solid fa-plane"></i>Flight</span>
+                <span><i class="fa-solid fa-hotel"></i>Hotel</span>
+                <span><i class="fa-solid fa-city"></i>City Tour</span>
+              </div>
+              <p class="desc">Gardens by the Bay, Sentosa Island, hawker centres — Singapore is a city of endless wonder.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="contact.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="deals-banner">
+          <h3>🎉 Custom Package? We've Got You!</h3>
+          <p>Can't find what you're looking for? Tell us your dream trip and we'll build it from scratch — just for you.</p>
+          <a href="contact.html" class="btn" style="background:var(--dark);">Get a Custom Quote</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="Subcribe">
+      <div class="container">
+        <h3>Get Exclusive Package Deals</h3>
+        <p class="sub-title stitle">Be the first to know about flash sales, seasonal discounts, and new packages.</p>
+        <div class="subdata">
+          <form action="" class="subForm">
+            <input type="email" name="email" placeholder="Enter your email address">
+            <input type="submit" value="Subscribe" class="btn">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/image/logo2.png" alt="Travosca" class="footer-brand-logo">
+          <p>We believe travel is the best investment you can make in yourself. Let us plan your next unforgettable adventure.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Top Destinations</h5>
+          <ul>
+            <li><a href="destinations.html">Bali, Indonesia</a></li>
+            <li><a href="destinations.html">Paris, France</a></li>
+            <li><a href="destinations.html">Switzerland</a></li>
+            <li><a href="destinations.html">Thailand</a></li>
+            <li><a href="destinations.html">Singapore</a></li>
+            <li><a href="destinations.html">Taiwan</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact Info</h5>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i>732 Despard St, Atlanta</a></li>
+            <li><a href="#"><i class="fa-solid fa-phone"></i>+97 888 8888</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i>info@travosca.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2025 <span>Travosca</span>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const h = document.getElementById('header');
+      if(window.scrollY > 60) h.classList.add('scrolled'); else h.classList.remove('scrolled');
+    });
+    document.querySelectorAll('.filter-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

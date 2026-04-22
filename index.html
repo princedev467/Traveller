@@ -1,652 +1,531 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./assets/css/all.min.css">
-    <link rel="stylesheet" href="./assets/css/font.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travosca — Explore The World</title>
+  <meta name="description" content="Discover the world's most beautiful destinations with Travosca. Book your dream trip today with our curated travel packages.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/font.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <a href="#">
-                <img src="assets/image/Logo.png" alt="">
-            </a>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="About Us.html">About Us</a></li>
-                    <li><a href="">Package<i class="fa-solid fa-angle-down"></i></a></li>
-                    <li><a href="">Destination<i class="fa-solid fa-angle-down"></i></a></li>
-                    <li><a href="">Blog<i class="fa-solid fa-angle-down "></i></a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#" class="search"><i class="fa-solid fa-magnifying-glass"></i></a>
+
+  <!-- ===== HEADER ===== -->
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <header id="header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="assets/image/Logo.png" alt="Travosca Logo">
+      </a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="packages.html">Package <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="destinations.html">Destination <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="blog.html">Blog <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <label for="menu-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="container">
+        <div class="herodata">
+          <h1>Make Your <br>Dream Journey.</h1>
+          <p>Explore the world's most breathtaking destinations with expertly curated travel packages.</p>
+          <form action="" class="expForm">
+            <select name="location">
+              <option value="0">📍 Location</option>
+              <option value="Bali">Bali, Indonesia</option>
+              <option value="Paris">Paris, France</option>
+              <option value="Swiss">Swiss, Alps</option>
+              <option value="Singapore">Singapore</option>
+              <option value="Thailand">Thailand</option>
+            </select>
+            <select name="date">
+              <option value="0">📅 Travel Date</option>
+              <option value="jan">January 2025</option>
+              <option value="feb">February 2025</option>
+              <option value="mar">March 2025</option>
+              <option value="apr">April 2025</option>
+            </select>
+            <select name="people">
+              <option value="0">👥 Travellers</option>
+              <option value="1">1 Person</option>
+              <option value="2">2 People</option>
+              <option value="3">3 People</option>
+              <option value="4">4+ People</option>
+            </select>
+            <input type="submit" value="Explore Now" class="btn">
+          </form>
+          <p class="pop"><strong>Popular:</strong> Bali &nbsp;·&nbsp; Istanbul &nbsp;·&nbsp; Rome &nbsp;·&nbsp; Paris</p>
         </div>
-    </header>
-    <main>
-        <section id="hero">
-            <div class="container">
-                <div class="herodata">
-                    <h1>Make in <br>
-                        your journey.</h1>
-                    <p>Explore the world with what you love beautiful
-                        natural beauty.</p>
-                    <form action="" class="expForm">
-                        <select name="location" id="">
-                            <option value="0">Location</option>
-                            <option value="Manali">Manali</option>
-                            <option value="Goa">Goa</option>
-                        </select>
-                        <select name=" Date " id="">
-                            <option value="0">Date </option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-                        <select name="People" id="">
-                            <option value="0">People</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                        </select>
-                        <input type="submit" value="Explore now" class="btn">
-                    </form>
-                    <p><span class="pop">Popular Place:</span> Bali, Istanbul, Rome, Paris.</p>
-                </div>
-            </div>
-        </section>
-        <section id="About ">
-            <div class="container">
-                <h3 class="main-title">About US</h3>
-                <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
-                <div class="row">
-
-                    <div class="col-5 aboutdetail">
-                        <div class="aboutdata">
-                            <img src="assets/image/Vector.png" alt="">
-                            <h4>Great team work</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tempor nunc non neque
-                                euismod porttitor. tortor egestas viverra. </p>
-                        </div>
-
-                    </div>
-
-
-
-
-                    <div class="col-3 aboutdetail">
-                        <div class="aboutdata ">
-                            <img src="assets/image/Vector (1).png" alt="">
-                            <h4>Our vision</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam.. </p>
-                        </div>
-
-                    </div>
-
-                    <div class="col-4 aboutdetail">
-                        <div class="aboutdata">
-                            <img src="assets/image/Vector (2).png" alt="">
-                            <h4>Our mision</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna aliqua. Ut enim ad minim veniam.. </p>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <section id="founder">
-            <div class="container">
-                <div class="row">
-                    <div class="col-6">
-                        <div class="fimage">
-                            <img src="assets/image/ceo.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-6 fdetail">
-                        <div class="fdata">
-                            <img src="assets/image/founder.png" alt="">
-
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porttitor sapien et urna
-                                tincidunt fringilla. Vivamus at augue interdum, blandit arcu quis, laoreet ipsum. In eu
-                                ipsum urna. Suspendisse suscipit est et neque.</p>
-
-                            <p>Mauris tempor tellus ante, ut fermentum erat gravida vel. Class aptent taciti sociosqu ad
-                                litora torquent per conubia nostra, per inceptos himenaeos. Aenean nec justo dui. Ut et
-                                consequat dui, a malesuada ipsum. Pellentesque nec turpis viverra, blandit mi a,
-                                accumsan justo.</p>
-
-                            <h5>Siti Sarah</h5>
-                            <h6>Founder Travosca</h6>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-
-        <section id="Package">
-            <div class="container">
-                <h3 class="main-title">Packages</h3>
-                <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
-                <div class="row popular">
-                    <div class="col-5">
-                        <h4>Popular Packages</h4>
-                        <p>orem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna </p>
-                    </div>
-                    <div class="col-2">
-                        <a href="#" class="btn btn1">Discover more</a>
-                    </div>
-                </div>
-                <div class="row pop-pack">
-                    <div class="col-4">
-                        <div class="pack-detail">
-                            <img src="assets/image/paris.jpg" alt="">
-                            <div class="pack-data">
-                                <div class="name">
-                                    <h5>Paris</h5>
-                                    <p>$299.00/2days</p>
-                                </div>
-
-                                <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod
-                                    tempor incididunt
-                                    ut labore et dolore
-                                    incididunt ut labore et dolore</p>
-                                <div class="inquiry">
-                                    <div class="rating">
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                    </div>
-                                    <a href="#" class="btn btn2">Booking now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="pack-detail">
-                            <img src="assets/image/swiss.jpg" alt="">
-                            <div class="pack-data">
-                                <div class="name">
-                                    <h5>Swiss</h5>
-                                    <p>$299.00/3days</p>
-                                </div>
-
-                                <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod
-                                    tempor incididunt
-                                    ut labore et dolore
-                                    incididunt ut labore et dolore</p>
-                                <div class="inquiry">
-                                    <div class="rating">
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                    </div>
-                                    <a href="#" class="btn btn2">Booking now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="pack-detail">
-                            <img src="assets/image/thiland.jpg" alt="">
-                            <div class="pack-data">
-                                <div class="name">
-                                    <h5>Thailand</h5>
-                                    <p>$299.00/3days</p>
-                                </div>
-
-                                <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod
-                                    tempor incididunt
-                                    ut labore et dolore
-                                    incididunt ut labore et dolore</p>
-                                <div class="inquiry">
-                                    <div class="rating">
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                    </div>
-                                    <a href="#" class="btn btn2">Booking now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="pack-detail">
-                            <img src="assets/image/taiwan.jpg" alt="">
-                            <div class="pack-data">
-                                <div class="name">
-                                    <h5>Taiwan</h5>
-                                    <p>$299.00/3days</p>
-                                </div>
-
-                                <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod
-                                    tempor incididunt
-                                    ut labore et dolore
-                                    incididunt ut labore et dolore</p>
-                                <div class="inquiry">
-                                    <div class="rating">
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                    </div>
-                                    <a href="#" class="btn btn2">Booking now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="pack-detail">
-                            <img src="assets/image/indonasia.jpg" alt="">
-                            <div class="pack-data">
-                                <div class="name">
-                                    <h5>Indonesi</h5>
-                                    <p>$299.00/3days</p>
-                                </div>
-
-                                <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod
-                                    tempor incididunt
-                                    ut labore et dolore
-                                    incididunt ut labore et dolore</p>
-                                <div class="inquiry">
-                                    <div class="rating">
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                    </div>
-                                    <a href="#" class="btn btn2">Booking now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-4">
-                        <div class="pack-detail">
-                            <img src="assets/image/singapore.jpg" alt="">
-                            <div class="pack-data">
-                                <div class="name">
-                                    <h5>Singapore</h5>
-                                    <p>$299.00/3days</p>
-                                </div>
-
-                                <p class="desc">Lorem ipsum dolor sit amet, consect adipiscing elit, sed do eiusmod
-                                    tempor incididunt
-                                    ut labore et dolore
-                                    incididunt ut labore et dolore</p>
-                                <div class="inquiry">
-                                    <div class="rating">
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                        <a href="#"><i class="fa-solid fa-star star"></i></a>
-                                    </div>
-                                    <a href="#" class="btn btn2">Booking now</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-            </div>
-        </section>
-        <section id="Destination">
-            <div class="container">
-                <h3 class="main-title">Destination</h3>
-                <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
-
-                <div class="swiper destslider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="dest-data">
-                                <img src="assets/image/bali.jpg" alt="">
-                                <div class="dest-detail">
-                                    <div class="circle">
-                                        “
-                                    </div>
-                                    <h5>Bali.</h5>
-                                    <p>Bali is a beautiful tourist spot and is visited by <br>many travelers. </p>
-                                </div>
-                            </div>
-                        </div>
-
-
-
-                        <div class="swiper-slide">
-                            <div class="dest-data">
-                                <img src="assets/image/thiablog.jpg" alt="">
-                                <div class="dest-detail">
-                                    <div class="circle">
-                                        “
-                                    </div>
-                                    <h5>Thailand.</h5>
-                                    <p>Thailand is a beautiful tourist spot and is visited by <br> many travelers. </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="dest-data">
-                                <img src="assets/image/pari-blog.jpg" alt="">
-                                <div class="dest-detail">
-                                    <div class="circle">
-                                        “
-                                    </div>
-                                    <h5>Paris.</h5>
-                                    <p>Paris is a beautiful tourist spot and is visited by <br> many travelers. </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="dest-data">
-                                <img src="assets/image/thiablog.jpg" alt="">
-                                <div class="dest-detail">
-                                    <div class="circle">
-                                        “
-                                    </div>
-                                    <h5>Indonesia.</h5>
-                                    <p>Indonesia is a beautiful tourist spot and is visited by <br> many travelers. </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="swiper-slide">
-                            <div class="dest-data">
-                                <img src="assets/image/singa-blog.jpg" alt="">
-                                <div class="dest-detail">
-                                    <div class="circle">
-                                        “
-                                    </div>
-                                    <h5>Singapore.</h5>
-                                    <p>Singapore is a beautiful tourist spot and is visited by <br> many travelers. </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-
-                </div>
-            </div>
-        </section>
-
-
-        <section id="blog">
-            <div class="container">
-                <h3 class="main-title">Blog</h3>
-                <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
-                <div class="row">
-                    <div class="col-4">
-
-                        <div class="row trow">
-                            <div class="col-12">
-
-                                <div class="tips">
-                                    <h6>Perfect | Tips</h6>
-                                    <h5>9 Popular Travel Destintion on Sale in 2022
-                                        <br> -
-                                    </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna</p>
-
-                                    <a href="#" class="btn btn4">Read More</a>
-                                </div>
-
-                            </div>
-
-
-                            <div class="col-12">
-
-                                <div class="tips">
-                                    <h6>Tips | Travel</h6>
-                                    <h5>How Are We Going to Travel in 2022
-                                        <br> -
-                                    </h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna</p>
-
-                                    <a href="#" class="btn btn4">Read More</a>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-8">
-                        <div class="stories">
-                            <div class="story-image">
-                                <img src="assets/image/blog.jpg" alt="">
-                            </div>
-                            <div class="story-data">
-                                <h6>Stories | Tips</h6>
-                                <h5>Travel Stories For Now and the Future</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna</p>
-
-                                <a href="#" class="btn btn5">Read More</a>
-
-                            </div>
-                        </div>
-
-
-
-                    </div>
-                </div>
-        </section>
-
-        <section id="Touch">
-            <div class="container">
-                <h3 class="main-title">About US</h3>
-                <p class="sub-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                    incididunt ut labore et dolore magna aliqua.</p>
-
-                <div class="row">
-                    <div class="col-6">
-                        <form action="" class="form1">
-                            <input type="text" name="name" placeholder="Your Name">
-                            <br>
-                            <input type="email" name="email" placeholder="Your Email">
-                            <br>
-                            <input type="text" name="subject" placeholder="Your Subject">
-                            <br>
-                            <textarea name="Your Message" placeholder="Your Message"></textarea>
-                            <br>
-                            <input type="submit" value="Send Message" class="btn btn6">
-                        </form>
-                    </div>
-                    <div class="col-6">
-                        <div class="codata">
-
-                            <h4>Get In Touch</h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                ut labore et dolore magna </p>
-                            <div class="row corow">
-                                <div class="col-6">
-                                    <div class="codetail">
-                                        <h6>Lhoksemawe, Aceh</h6>
-
-                                        <a href="#"><i class="fa-solid fa-phone"></i>+62 6943 6956</a>
-
-                                        <a href="#"><i class="fa-solid fa-envelope"></i>contact@domain.com</a>
-                                        <a href="#"><i class="fa-solid fa-location-dot"></i>Jl. Darussalam Hagu
-                                            selatan</a>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="codetail">
-                                        <h6>Lhoksemawe, Aceh</h6>
-
-                                        <a href="#"><i class="fa-solid fa-phone"></i>+62 6943 6956</a>
-
-                                        <a href="#"><i class="fa-solid fa-envelope"></i>contact@domain.com</a>
-
-                                        <a href="#"><i class="fa-solid fa-location-dot"></i>Jl. Darussalam Hagu
-                                            selatan</a>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="codetail">
-                                        <h6>Lhoksemawe, Aceh</h6>
-
-                                        <a href="#"><i class="fa-solid fa-phone"></i>+62 6943 6956</a>
-
-                                        <a href="#"><i class="fa-solid fa-envelope"></i>contact@domain.com</a>
-
-                                        <a href="#"><i class="fa-solid fa-location-dot"></i>Jl. Darussalam Hagu
-                                            selatan</a>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="codetail">
-                                        <h6>Lhoksemawe, Aceh</h6>
-
-                                        <a href="#"><i class="fa-solid fa-phone"></i>+62 6943 6956</a>
-
-                                        <a href="#"><i class="fa-solid fa-envelope"></i>contact@domain.com</a>
-
-                                        <a href="#"><i class="fa-solid fa-location-dot"></i>Jl. Darussalam Hagu
-                                            selatan</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section id="Subcribe">
-            <div class="container">
-                <h3 class="main-title">Subcribe to get special price</h3>
-                <p class="sub-title stitle">Dont wanna miss something? subscribe right now and get special promotion and
-                    monthly newsletter</p>
-                <div class="subdata">
-                    <form action="" class="subForm">
-                        <input type="email" name="email" placeholder="Enter Your Email ">
-                        <input type="submit" value="Subscribe" class="btn btn7">
-                    </form>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="row footrow">
-                <div class="col-3">
-                    <a href="#"><img src="assets/image/logo2.png" alt=""></a>
-
-                </div>
-                
-                    <div class="coinfo col-9">
-                        <div class="col-5">
-                            <h5>Contact Information</h5>
-                            <ul>
-                                <li><a href="#"><i class="fa-solid fa-location-dot"></i>732 Despard St, Atlanta</a></li>
-                                <li><a href="#"><i class="fa-solid fa-phone"></i>+97 888 8888</a></li>
-                                <li><a href="#"><i class="fa-solid fa-envelope"></i>info@traveller.com</a></li>
-
-
-                            </ul>
-                        </div>
-                        <div class="col-4">
-                            <h5>Quick Link</h5>
-                            <ul>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">securityTours</a></li>
-                                <li><a href="#">Contact</a></li>
-
-                            </ul>
-
-                        </div>
-                        <div class="col-3">
-                            <h5>Follow Us</h5>
-
-                            <div class="appicon">
-                                <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-youtube"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                            </div>
-
-
-
-                        </div>
-                    </div>
-
-               
-            </div>
-
-
+      </div>
+    </section>
+
+    <!-- ===== STATS BANNER ===== -->
+    <div class="stats-banner">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <h3>12K+</h3>
+            <p>Happy Travellers</p>
+          </div>
+          <div class="stat-item">
+            <h3>98+</h3>
+            <p>Destinations</p>
+          </div>
+          <div class="stat-item">
+            <h3>15+</h3>
+            <p>Years Experience</p>
+          </div>
+          <div class="stat-item">
+            <h3>4.9★</h3>
+            <p>Average Rating</p>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="job-register">
-            <p class="copyright">Copyright © 2021 UNQ Design</p>
-
+    <!-- ===== ABOUT ===== -->
+    <section id="About" class="section">
+      <div class="container">
+        <h3 class="main-title">Why Choose <span>Travosca</span></h3>
+        <p class="sub-title">We craft unforgettable travel experiences tailored to every kind of adventurer — from solo explorers to families.</p>
+        <div class="about-grid">
+          <div class="about-card">
+            <div class="icon-wrap">
+              <img src="assets/image/Vector.png" alt="Team Work">
+            </div>
+            <h4>Great Team Work</h4>
+            <p>Our dedicated travel experts work round the clock to make your trip seamless, safe, and memorable.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon-wrap">
+              <img src="assets/image/Vector (1).png" alt="Vision">
+            </div>
+            <h4>Our Vision</h4>
+            <p>To inspire every person on earth to explore the world with confidence, curiosity, and joy.</p>
+          </div>
+          <div class="about-card">
+            <div class="icon-wrap">
+              <img src="assets/image/Vector (2).png" alt="Mission">
+            </div>
+            <h4>Our Mission</h4>
+            <p>Delivering premium travel experiences at honest prices, building trust one journey at a time.</p>
+          </div>
         </div>
+      </div>
+    </section>
 
-    </footer>
+    <!-- ===== FOUNDER ===== -->
+    <section id="founder" class="section">
+      <div class="container">
+        <div class="row" style="align-items: center;">
+          <div class="col-6">
+            <div class="founder-img-wrap">
+              <img src="assets/image/ceo.jpg" alt="Siti Sarah — Founder of Travosca">
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="founder-content">
+              <span class="founder-badge">Our Founder</span>
+              <h2>A Vision Born From Wanderlust</h2>
+              <p>After years of travelling solo across 60+ countries, Siti Sarah realised that most people never get to experience the world the way it truly deserves to be seen — not through a rushed itinerary, but through a genuine connection with each destination.</p>
+              <p>That belief became Travosca — a company built on authenticity, passion, and the conviction that every journey should change you for the better.</p>
+              <div class="founder-sig">
+                <h5>Siti Sarah</h5>
+                <h6>Founder &amp; CEO, Travosca</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- ===== PACKAGES ===== -->
+    <section id="Package" class="section">
+      <div class="container">
+        <h3 class="main-title">Our <span>Packages</span></h3>
+        <p class="sub-title">Handpicked travel packages designed to give you the perfect balance of adventure, comfort, and value.</p>
+        <div class="packages-header">
+          <div>
+            <h4>Popular Packages</h4>
+            <p>Explore our top-rated packages trusted by thousands of travellers worldwide.</p>
+          </div>
+          <a href="packages.html" class="btn">Discover More</a>
+        </div>
+        <div class="pop-pack">
+          <div class="pack-detail">
+            <img src="assets/image/paris.jpg" alt="Paris">
+            <div class="pack-data">
+              <div class="name">
+                <h5>Paris</h5>
+                <p>$299<small>/2days</small></p>
+              </div>
+              <p class="desc">Stroll along the Seine, visit the Eiffel Tower, and lose yourself in the romance of the City of Light.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="packages.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
 
-    <script>
-        var swiper = new Swiper(".destslider", {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+          <div class="pack-detail">
+            <img src="assets/image/swiss.jpg" alt="Switzerland">
+            <div class="pack-data">
+              <div class="name">
+                <h5>Switzerland</h5>
+                <p>$499<small>/3days</small></p>
+              </div>
+              <p class="desc">Marvel at snow-capped Alps, cruise crystal lakes, and breathe the purest mountain air.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="packages.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
 
-            breakpoints: {
+          <div class="pack-detail">
+            <img src="assets/image/thiland.jpg" alt="Thailand">
+            <div class="pack-data">
+              <div class="name">
+                <h5>Thailand</h5>
+                <p>$199<small>/3days</small></p>
+              </div>
+              <p class="desc">Golden temples, turquoise waters, vibrant street food, and warm tropical sunsets await you.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="packages.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
 
-                768: {
-                    slidesPerView: 2,
-                    spaceBetween: 40,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 50,
-                },
-            },
-        });
-    </script>
+          <div class="pack-detail">
+            <img src="assets/image/taiwan.jpg" alt="Taiwan">
+            <div class="pack-data">
+              <div class="name">
+                <h5>Taiwan</h5>
+                <p>$249<small>/3days</small></p>
+              </div>
+              <p class="desc">Night markets, mountain trails, hot springs, and a culture that blends ancient and modern.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="packages.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pack-detail">
+            <img src="assets/image/indonasia.jpg" alt="Indonesia">
+            <div class="pack-data">
+              <div class="name">
+                <h5>Indonesia</h5>
+                <p>$179<small>/3days</small></p>
+              </div>
+              <p class="desc">Over 17,000 islands of culture, volcanoes, rainforests, and some of the world's best diving.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="packages.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pack-detail">
+            <img src="assets/image/singapore.jpg" alt="Singapore">
+            <div class="pack-data">
+              <div class="name">
+                <h5>Singapore</h5>
+                <p>$349<small>/3days</small></p>
+              </div>
+              <p class="desc">A dazzling city-state where futuristic skylines meet lush gardens and world-class cuisine.</p>
+              <div class="inquiry">
+                <div class="rating">
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i><i class="fa-solid fa-star star"></i>
+                  <i class="fa-solid fa-star star"></i>
+                </div>
+                <a href="packages.html" class="btn btn2">Book Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DESTINATIONS (Swiper) ===== -->
+    <section id="Destination" class="section">
+      <div class="container">
+        <h3 class="main-title">Top <span>Destinations</span></h3>
+        <p class="sub-title">From tropical paradises to ancient cities — discover the places that will take your breath away.</p>
+        <div class="swiper destslider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="dest-data">
+                <img src="assets/image/bali.jpg" alt="Bali">
+                <div class="dest-detail">
+                  <div class="circle">🌴</div>
+                  <h5>Bali, Indonesia</h5>
+                  <p>The Island of the Gods — lush rice fields, sacred temples, and pristine beaches.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="dest-data">
+                <img src="assets/image/thiablog.jpg" alt="Thailand">
+                <div class="dest-detail">
+                  <div class="circle">🏯</div>
+                  <h5>Thailand</h5>
+                  <p>Smiling locals, ancient temples, and the most vibrant street food scene in Asia.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="dest-data">
+                <img src="assets/image/pari-blog.jpg" alt="Paris">
+                <div class="dest-detail">
+                  <div class="circle">🗼</div>
+                  <h5>Paris, France</h5>
+                  <p>The eternal city of love, art, fashion, and world-famous culinary experiences.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="dest-data">
+                <img src="assets/image/indonasia.jpg" alt="Indonesia">
+                <div class="dest-detail">
+                  <div class="circle">🌋</div>
+                  <h5>Indonesia</h5>
+                  <p>An archipelago of wonder — from Borobudur's majesty to Komodo's wild shores.</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="dest-data">
+                <img src="assets/image/singa-blog.jpg" alt="Singapore">
+                <div class="dest-detail">
+                  <div class="circle">🌆</div>
+                  <h5>Singapore</h5>
+                  <p>Where futuristic architecture meets multicultural traditions in a clean, vibrant city.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOG ===== -->
+    <section id="blog" class="section">
+      <div class="container">
+        <h3 class="main-title">Travel <span>Stories</span></h3>
+        <p class="sub-title">Inspiration, tips, and real stories from our community of passionate travellers.</p>
+        <div class="blog-layout">
+          <div class="blog-featured">
+            <div class="blog-featured-img">
+              <img src="assets/image/blog.jpg" alt="Travel Stories">
+            </div>
+            <div class="blog-body">
+              <span class="blog-tag">Stories · Tips</span>
+              <h5>Travel Stories For Now and the Future</h5>
+              <p>What does travel look like in a changing world? We explore how modern travellers are redefining exploration — slower, deeper, and more meaningful than ever before.</p>
+              <a href="blog.html" class="btn">Read More</a>
+            </div>
+          </div>
+          <div class="blog-small-list">
+            <div class="blog-card-small">
+              <div class="blog-body">
+                <span class="blog-tag">Perfect · Tips</span>
+                <h5>9 Popular Travel Destinations on Sale in 2025</h5>
+                <p>Discover incredible deals on bucket-list destinations — from Santorini sunsets to Patagonia treks. These limited-time offers won't last long.</p>
+                <a href="blog.html" class="btn">Read More</a>
+              </div>
+            </div>
+            <div class="blog-card-small">
+              <div class="blog-body">
+                <span class="blog-tag">Tips · Travel</span>
+                <h5>How Are We Going to Travel in 2025?</h5>
+                <p>From slow travel and eco-tourism to AI-powered itineraries — the future of travel is here, and it's more exciting than ever.</p>
+                <a href="blog.html" class="btn">Read More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="Touch" class="section">
+      <div class="container">
+        <h3 class="main-title">Get In <span>Touch</span></h3>
+        <p class="sub-title">Have a question or want to plan your next trip? Reach out — our travel experts are ready to help.</p>
+        <div class="row" style="align-items: flex-start;">
+          <div class="col-6">
+            <form action="" class="form1">
+              <input type="text" name="name" placeholder="Your Full Name">
+              <input type="email" name="email" placeholder="Your Email Address">
+              <input type="text" name="subject" placeholder="Subject">
+              <textarea name="message" placeholder="Your Message"></textarea>
+              <input type="submit" value="Send Message" class="btn btn6">
+            </form>
+          </div>
+          <div class="col-6">
+            <div class="codata">
+              <h4>We'd Love to Hear From You</h4>
+              <p>Whether you're planning a solo adventure, a romantic escape, or a family vacation — we're here to make it perfect.</p>
+              <div class="corow">
+                <div class="codetail">
+                  <h6>Main Office</h6>
+                  <a href="#"><i class="fa-solid fa-location-dot"></i>732 Despard St, Atlanta</a>
+                  <a href="tel:+976943"><i class="fa-solid fa-phone"></i>+62 6943 6956</a>
+                  <a href="mailto:info@travosca.com"><i class="fa-solid fa-envelope"></i>info@travosca.com</a>
+                </div>
+                <div class="codetail">
+                  <h6>Asia Office</h6>
+                  <a href="#"><i class="fa-solid fa-location-dot"></i>Jl. Darussalam, Aceh</a>
+                  <a href="tel:+976943"><i class="fa-solid fa-phone"></i>+62 6943 6956</a>
+                  <a href="mailto:asia@travosca.com"><i class="fa-solid fa-envelope"></i>asia@travosca.com</a>
+                </div>
+                <div class="codetail">
+                  <h6>Support Hours</h6>
+                  <a href="#"><i class="fa-solid fa-clock"></i>Mon–Fri: 9AM – 6PM</a>
+                  <a href="#"><i class="fa-solid fa-clock"></i>Sat–Sun: 10AM – 4PM</a>
+                  <a href="#"><i class="fa-solid fa-headset"></i>24/7 Emergency Line</a>
+                </div>
+                <div class="codetail">
+                  <h6>Follow Us</h6>
+                  <a href="#"><i class="fa-brands fa-instagram"></i>@travosca</a>
+                  <a href="#"><i class="fa-brands fa-facebook"></i>Travosca</a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i>Travosca TV</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SUBSCRIBE ===== -->
+    <section id="Subcribe">
+      <div class="container">
+        <h3>Subscribe &amp; Get Special Offers</h3>
+        <p class="sub-title stitle">Don't miss exclusive deals and travel inspiration. Join 12,000+ subscribers today.</p>
+        <div class="subdata">
+          <form action="" class="subForm">
+            <input type="email" name="email" placeholder="Enter your email address">
+            <input type="submit" value="Subscribe" class="btn">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/image/logo2.png" alt="Travosca" class="footer-brand-logo">
+          <p>We believe travel is the best investment you can make in yourself. Let us plan your next unforgettable adventure.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Top Destinations</h5>
+          <ul>
+            <li><a href="destinations.html">Bali, Indonesia</a></li>
+            <li><a href="destinations.html">Paris, France</a></li>
+            <li><a href="destinations.html">Switzerland</a></li>
+            <li><a href="destinations.html">Thailand</a></li>
+            <li><a href="destinations.html">Singapore</a></li>
+            <li><a href="destinations.html">Taiwan</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact Info</h5>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i>732 Despard St, Atlanta</a></li>
+            <li><a href="tel:+97888"><i class="fa-solid fa-phone"></i>+97 888 8888</a></li>
+            <li><a href="mailto:info@travosca.com"><i class="fa-solid fa-envelope"></i>info@travosca.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2025 <span>Travosca</span>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    // Swiper
+    var swiper = new Swiper(".destslider", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      breakpoints: {
+        768:  { slidesPerView: 2, spaceBetween: 25 },
+        1024: { slidesPerView: 3, spaceBetween: 30 }
+      }
+    });
+
+    // Sticky header
+    window.addEventListener('scroll', function() {
+      const header = document.getElementById('header');
+      if (window.scrollY > 60) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
-
 </html>

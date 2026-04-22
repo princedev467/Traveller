@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations — Travosca</title>
+  <meta name="description" content="Explore our handpicked travel destinations around the world. From tropical paradises to historic European cities, find your next adventure.">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/font.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <style>
+    .dest-page-card { cursor: pointer; }
+    .dest-page-overlay { flex-direction: column; justify-content: flex-end; }
+    .dest-tag {
+      display: inline-block; background: var(--accent); color: var(--dark);
+      font-size: 1.2rem; font-weight: 700; padding: 0.3rem 1rem;
+      border-radius: 3rem; margin-bottom: 0.8rem; align-self: flex-start;
+    }
+    .dest-page-card:hover .dest-page-overlay h5 { color: var(--accent); }
+    .featured-dest {
+      border-radius: var(--radius); overflow: hidden;
+      position: relative; height: 55rem; margin-bottom: 3rem;
+      box-shadow: var(--shadow);
+    }
+    .featured-dest img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .featured-dest:hover img { transform: scale(1.04); }
+    .featured-dest-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.1) 60%);
+      display: flex; flex-direction: column; justify-content: flex-end; padding: 4rem;
+    }
+    .featured-dest-overlay .dest-tag { font-size: 1.4rem; padding: 0.5rem 1.5rem; }
+    .featured-dest-overlay h2 { font-size: 5rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; }
+    .featured-dest-overlay p { font-size: 1.7rem; color: rgba(255,255,255,0.8); max-width: 60rem; margin-bottom: 2.5rem; }
+    .region-tabs { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 4rem; justify-content: center; }
+    .region-tab {
+      padding: 0.9rem 2.5rem; border-radius: 5rem; font-size: 1.5rem; font-weight: 600;
+      border: 2px solid #e5e7eb; cursor: pointer; transition: var(--transition);
+      background: #fff; color: var(--gray); font-family: 'Poppins', sans-serif;
+    }
+    .region-tab:hover, .region-tab.active { background: var(--dark); color: var(--white); border-color: var(--dark); }
+    .dest-count { font-size: 1.4rem; color: var(--gray); text-align: center; margin-bottom: 3rem; }
+    .dest-count strong { color: var(--dark); }
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <header id="header" class="scrolled">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/image/Logo.png" alt="Travosca Logo"></a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="packages.html">Package <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="destinations.html" class="active">Destination <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="blog.html">Blog <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero" style="background-image: url('assets/image/bali.jpg');">
+      <div class="page-hero-content">
+        <h1>Destinations</h1>
+        <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>Destinations</p>
+      </div>
+    </div>
+
+    <!-- FEATURED SWIPER -->
+    <section class="section" style="background:#fff;">
+      <div class="container">
+        <h3 class="main-title">Featured <span>Destinations</span></h3>
+        <p class="sub-title">Swipe through our most breathtaking destinations — each one handpicked by our travel experts.</p>
+        <div class="swiper featuredSwiper" style="border-radius: var(--radius); overflow: hidden;">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="featured-dest">
+                <img src="assets/image/bali.jpg" alt="Bali">
+                <div class="featured-dest-overlay">
+                  <span class="dest-tag">🌴 Asia</span>
+                  <h2>Bali, Indonesia</h2>
+                  <p>Sacred temples, emerald rice terraces, and turquoise waters — Bali is unlike anywhere on earth.</p>
+                  <a href="packages.html" class="btn btn-outline">Explore Packages</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="featured-dest">
+                <img src="assets/image/pari-blog.jpg" alt="Paris">
+                <div class="featured-dest-overlay">
+                  <span class="dest-tag">🗼 Europe</span>
+                  <h2>Paris, France</h2>
+                  <p>The city of light, love, and Haute Cuisine — Paris is the cultural capital of the world.</p>
+                  <a href="packages.html" class="btn btn-outline">Explore Packages</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="featured-dest">
+                <img src="assets/image/singa-blog.jpg" alt="Singapore">
+                <div class="featured-dest-overlay">
+                  <span class="dest-tag">🌆 Asia</span>
+                  <h2>Singapore</h2>
+                  <p>A gleaming city-state where futuristic skylines, hawker food, and Gardens by the Bay await.</p>
+                  <a href="packages.html" class="btn btn-outline">Explore Packages</a>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="featured-dest">
+                <img src="assets/image/thiablog.jpg" alt="Thailand">
+                <div class="featured-dest-overlay">
+                  <span class="dest-tag">🏯 Asia</span>
+                  <h2>Thailand</h2>
+                  <p>Golden temples, floating markets, tropical islands — Thailand delivers a lifetime of memories.</p>
+                  <a href="packages.html" class="btn btn-outline">Explore Packages</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL DESTINATIONS GRID -->
+    <section class="section" style="background: var(--light);">
+      <div class="container">
+        <h3 class="main-title">All <span>Destinations</span></h3>
+        <p class="sub-title">98 destinations and counting — explore by region or browse them all.</p>
+        <div class="region-tabs">
+          <button class="region-tab active">All</button>
+          <button class="region-tab">Southeast Asia</button>
+          <button class="region-tab">Europe</button>
+          <button class="region-tab">East Asia</button>
+          <button class="region-tab">South Asia</button>
+        </div>
+        <p class="dest-count">Showing <strong>6</strong> destinations</p>
+        <div class="dest-page-grid">
+          <div class="dest-page-card">
+            <img src="assets/image/bali.jpg" alt="Bali">
+            <div class="dest-page-overlay">
+              <span class="dest-tag">🌴 Southeast Asia</span>
+              <h5>Bali, Indonesia</h5>
+              <p>Temples, beaches &amp; rice fields</p>
+            </div>
+          </div>
+          <div class="dest-page-card">
+            <img src="assets/image/pari-blog.jpg" alt="Paris">
+            <div class="dest-page-overlay">
+              <span class="dest-tag">🗼 Europe</span>
+              <h5>Paris, France</h5>
+              <p>Romance, art &amp; fine cuisine</p>
+            </div>
+          </div>
+          <div class="dest-page-card">
+            <img src="assets/image/swiss.jpg" alt="Switzerland">
+            <div class="dest-page-overlay">
+              <span class="dest-tag">🏔️ Europe</span>
+              <h5>Switzerland</h5>
+              <p>Alpine beauty at its finest</p>
+            </div>
+          </div>
+          <div class="dest-page-card">
+            <img src="assets/image/thiablog.jpg" alt="Thailand">
+            <div class="dest-page-overlay">
+              <span class="dest-tag">🏯 Southeast Asia</span>
+              <h5>Thailand</h5>
+              <p>Temples, jungles &amp; islands</p>
+            </div>
+          </div>
+          <div class="dest-page-card">
+            <img src="assets/image/singa-blog.jpg" alt="Singapore">
+            <div class="dest-page-overlay">
+              <span class="dest-tag">🌆 Southeast Asia</span>
+              <h5>Singapore</h5>
+              <p>Urban wonder &amp; world cuisine</p>
+            </div>
+          </div>
+          <div class="dest-page-card">
+            <img src="assets/image/taiwan.jpg" alt="Taiwan">
+            <div class="dest-page-overlay">
+              <span class="dest-tag">🍜 East Asia</span>
+              <h5>Taiwan</h5>
+              <p>Night markets &amp; mountain trails</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Subcribe">
+      <div class="container">
+        <h3>Find Your Next Destination</h3>
+        <p class="sub-title stitle">Subscribe and get personalised destination recommendations straight to your inbox.</p>
+        <div class="subdata">
+          <form action="" class="subForm">
+            <input type="email" name="email" placeholder="Enter your email address">
+            <input type="submit" value="Subscribe" class="btn">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/image/logo2.png" alt="Travosca" class="footer-brand-logo">
+          <p>We believe travel is the best investment you can make in yourself.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Top Destinations</h5>
+          <ul>
+            <li><a href="destinations.html">Bali, Indonesia</a></li>
+            <li><a href="destinations.html">Paris, France</a></li>
+            <li><a href="destinations.html">Switzerland</a></li>
+            <li><a href="destinations.html">Thailand</a></li>
+            <li><a href="destinations.html">Singapore</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact Info</h5>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i>732 Despard St, Atlanta</a></li>
+            <li><a href="#"><i class="fa-solid fa-phone"></i>+97 888 8888</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i>info@travosca.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2025 <span>Travosca</span>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper(".featuredSwiper", {
+      loop: true, autoplay: { delay: 4000, disableOnInteraction: false },
+      navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+      pagination: { el: '.swiper-pagination', clickable: true },
+    });
+    window.addEventListener('scroll', function() {
+      const h = document.getElementById('header');
+      if(window.scrollY > 60) h.classList.add('scrolled'); else h.classList.remove('scrolled');
+    });
+    document.querySelectorAll('.region-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        document.querySelectorAll('.region-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+      });
+    });
+  </script>
+</body>
+</html>

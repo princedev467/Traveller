@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Travosca</title>
+  <meta name="description" content="Get in touch with the Travosca team. Plan your dream trip, ask a question, or request a custom travel package.">
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="./assets/css/font.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <style>
+    .contact-page-grid {
+      display: grid; grid-template-columns: 1.1fr 1fr;
+      gap: 6rem; align-items: start;
+    }
+    .contact-info-block { padding-top: 1rem; }
+    .contact-info-block h2 { font-size: 4.5rem; font-weight: 700; margin-bottom: 1.5rem; line-height: 1.2; }
+    .contact-info-block > p { font-size: 1.65rem; color: var(--gray); line-height: 1.9; margin-bottom: 4rem; }
+    .info-cards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 4rem; }
+    .info-card {
+      background: #fff; border-radius: var(--radius);
+      padding: 2.5rem; box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+      transition: var(--transition); border-left: 4px solid var(--accent);
+    }
+    .info-card:hover { transform: translateY(-0.5rem); box-shadow: var(--shadow); }
+    .info-card .icon { font-size: 2.8rem; color: var(--accent); margin-bottom: 1.2rem; }
+    .info-card h6 { font-size: 1.6rem; font-weight: 700; margin-bottom: 0.8rem; }
+    .info-card p, .info-card a {
+      font-size: 1.45rem; color: var(--gray); line-height: 1.8;
+      display: block; transition: var(--transition);
+    }
+    .info-card a:hover { color: var(--accent); }
+    .social-row { display: flex; gap: 1.2rem; }
+    .social-row a {
+      width: 4.5rem; height: 4.5rem; background: #f3f4f6; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--gray); font-size: 1.9rem; transition: var(--transition);
+    }
+    .social-row a:hover { background: var(--accent); color: var(--dark); }
+    .contact-form-wrap {
+      background: #fff; border-radius: var(--radius);
+      padding: 5rem 4.5rem; box-shadow: var(--shadow);
+    }
+    .contact-form-wrap h3 { font-size: 3rem; font-weight: 700; margin-bottom: 0.8rem; }
+    .contact-form-wrap > p { font-size: 1.5rem; color: var(--gray); margin-bottom: 3rem; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .form-group { display: flex; flex-direction: column; margin-bottom: 2rem; }
+    .form-group label { font-size: 1.4rem; font-weight: 600; margin-bottom: 0.8rem; color: var(--dark); }
+    .form-group input, .form-group select, .form-group textarea {
+      padding: 1.4rem 1.8rem; font-size: 1.5rem;
+      font-family: 'Poppins', sans-serif; border: 1.5px solid #e5e7eb;
+      border-radius: 0.8rem; outline: none; transition: var(--transition); background: #fafafa;
+    }
+    .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+      border-color: var(--accent); background: #fff;
+      box-shadow: 0 0 0 3px rgba(244,168,29,0.15);
+    }
+    .form-group textarea { height: 14rem; resize: vertical; }
+    .form-group select { cursor: pointer; color: #555; }
+    .submit-btn { width: 100%; padding: 1.7rem; font-size: 1.7rem; border-radius: 5rem; }
+    .map-section { margin-top: 9rem; }
+    .map-section h3 { text-align: center; font-size: 4rem; font-weight: 700; margin-bottom: 1rem; }
+    .map-section > p { text-align: center; font-size: 1.6rem; color: var(--gray); margin-bottom: 4rem; }
+    .map-placeholder {
+      width: 100%; height: 45rem; border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow); position: relative;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 2rem;
+    }
+    .map-placeholder i { font-size: 6rem; color: var(--accent); }
+    .map-placeholder h4 { font-size: 2.5rem; color: #fff; font-weight: 600; }
+    .map-placeholder p { font-size: 1.6rem; color: rgba(255,255,255,0.65); }
+    .map-offices { display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem; margin-top: 4rem; }
+    .map-office-card {
+      background: #fff; border-radius: var(--radius); padding: 3rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.07); text-align: center;
+      transition: var(--transition);
+    }
+    .map-office-card:hover { transform: translateY(-0.5rem); box-shadow: var(--shadow); }
+    .map-office-card i { font-size: 3rem; color: var(--accent); margin-bottom: 1.5rem; }
+    .map-office-card h5 { font-size: 2rem; font-weight: 700; margin-bottom: 1rem; }
+    .map-office-card p { font-size: 1.45rem; color: var(--gray); line-height: 1.8; }
+    .faq-section { padding: 9rem 0; background: #fff; }
+    .faq-section h3 { text-align: center; font-size: 4rem; font-weight: 700; margin-bottom: 1rem; }
+    .faq-section > .container > p { text-align: center; font-size: 1.6rem; color: var(--gray); margin-bottom: 5rem; }
+    .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .faq-item {
+      background: var(--light); border-radius: var(--radius);
+      padding: 3rem; border-left: 4px solid var(--accent);
+    }
+    .faq-item h6 { font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
+    .faq-item p { font-size: 1.5rem; color: var(--gray); line-height: 1.8; }
+    @media(max-width:992px) {
+      .contact-page-grid { grid-template-columns: 1fr; }
+      .map-offices { grid-template-columns: 1fr 1fr; }
+      .faq-grid { grid-template-columns: 1fr; }
+    }
+    @media(max-width:768px) {
+      .info-cards-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 3.5rem 2.5rem; }
+      .map-offices { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <input type="checkbox" id="menu-toggle" class="menu-toggle">
+  <header id="header" class="scrolled">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="assets/image/Logo.png" alt="Travosca Logo"></a>
+      <nav class="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="packages.html">Package <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="destinations.html">Destination <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="blog.html">Blog <i class="fa-solid fa-angle-down"></i></a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="nav-search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-hero" style="background-image: url('assets/image/bg3.jpg');">
+      <div class="page-hero-content">
+        <h1>Contact Us</h1>
+        <p class="breadcrumb"><a href="index.html">Home</a><span>/</span>Contact</p>
+      </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section class="section" style="background: var(--light);">
+      <div class="container">
+        <div class="contact-page-grid">
+
+          <!-- Info Side -->
+          <div class="contact-info-block">
+            <span class="founder-badge">Get In Touch</span>
+            <h2>We'd Love to Hear From You</h2>
+            <p>Whether you're planning your first international trip or your fiftieth, our team of passionate travel experts is here to help you create the perfect itinerary — for any budget, any style.</p>
+
+            <div class="info-cards-grid">
+              <div class="info-card">
+                <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                <h6>Main Office</h6>
+                <p>732 Despard St<br>Atlanta, GA 30310<br>United States</p>
+              </div>
+              <div class="info-card">
+                <div class="icon"><i class="fa-solid fa-building"></i></div>
+                <h6>Asia Office</h6>
+                <p>Jl. Darussalam Hagu<br>Lhoksemawe, Aceh<br>Indonesia</p>
+              </div>
+              <div class="info-card">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                <h6>Phone</h6>
+                <a href="tel:+97888">+97 888 8888</a>
+                <a href="tel:+626943">+62 6943 6956</a>
+              </div>
+              <div class="info-card">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                <h6>Email</h6>
+                <a href="mailto:info@travosca.com">info@travosca.com</a>
+                <a href="mailto:support@travosca.com">support@travosca.com</a>
+              </div>
+              <div class="info-card">
+                <div class="icon"><i class="fa-solid fa-clock"></i></div>
+                <h6>Working Hours</h6>
+                <p>Mon–Fri: 9AM – 6PM</p>
+                <p>Sat–Sun: 10AM – 4PM</p>
+              </div>
+              <div class="info-card">
+                <div class="icon"><i class="fa-solid fa-headset"></i></div>
+                <h6>24/7 Emergency</h6>
+                <a href="tel:+97888">+97 888 8888</a>
+                <p>Available for active travellers only</p>
+              </div>
+            </div>
+
+            <h6 style="font-size:1.7rem; font-weight:700; margin-bottom:1.5rem;">Follow Us</h6>
+            <div class="social-row">
+              <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <!-- Form Side -->
+          <div class="contact-form-wrap">
+            <h3>Send Us a Message</h3>
+            <p>Fill in the form below and we'll get back to you within 24 hours.</p>
+            <form action="" id="contactForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">First Name *</label>
+                  <input type="text" id="firstName" name="firstName" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Last Name *</label>
+                  <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890">
+              </div>
+              <div class="form-group">
+                <label for="inquiry">Type of Inquiry *</label>
+                <select id="inquiry" name="inquiry" required>
+                  <option value="">Select an option...</option>
+                  <option value="package">Package Booking</option>
+                  <option value="custom">Custom Trip Planning</option>
+                  <option value="group">Group Travel</option>
+                  <option value="support">Customer Support</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="destination">Preferred Destination</label>
+                <input type="text" id="destination" name="destination" placeholder="e.g. Bali, Paris, Switzerland...">
+              </div>
+              <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea id="message" name="message" placeholder="Tell us about your dream trip, travel dates, number of travellers, and any special requirements..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold submit-btn">
+                <i class="fa-solid fa-paper-plane" style="margin-right:1rem;"></i> Send Message
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+        <!-- MAP PLACEHOLDER -->
+        <div class="map-section">
+          <h3>Find <span style="color:var(--accent);">Our Offices</span></h3>
+          <p>Visit us in person at one of our global offices — we'd love to meet you.</p>
+          <div class="map-placeholder">
+            <i class="fa-solid fa-map-location-dot"></i>
+            <h4>Interactive Map</h4>
+            <p>732 Despard St, Atlanta, GA · Jl. Darussalam, Aceh, Indonesia</p>
+          </div>
+          <div class="map-offices">
+            <div class="map-office-card">
+              <i class="fa-solid fa-building"></i>
+              <h5>Headquarters</h5>
+              <p>732 Despard St<br>Atlanta, Georgia 30310<br>United States</p>
+            </div>
+            <div class="map-office-card">
+              <i class="fa-solid fa-globe-asia"></i>
+              <h5>Asia Pacific Office</h5>
+              <p>Jl. Darussalam Hagu Selatan<br>Lhoksemawe, Aceh 24351<br>Indonesia</p>
+            </div>
+            <div class="map-office-card">
+              <i class="fa-solid fa-headset"></i>
+              <h5>Support Center</h5>
+              <p>Available 24/7 for active travellers<br>Phone: +97 888 8888<br>Email: support@travosca.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+      <div class="container">
+        <h3>Frequently Asked <span style="color:var(--accent);">Questions</span></h3>
+        <p>Quick answers to the questions we hear most often. Still have more? Just send us a message above.</p>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h6>How do I book a travel package?</h6>
+            <p>Simply browse our packages, click "Book Now" and fill in your details, or contact us directly via this form or phone and our team will handle everything for you.</p>
+          </div>
+          <div class="faq-item">
+            <h6>Can I customise an existing package?</h6>
+            <p>Absolutely! All our packages are fully customisable. Tell us your preferences — dates, budget, activities — and we'll tailor the perfect itinerary just for you.</p>
+          </div>
+          <div class="faq-item">
+            <h6>What is your cancellation policy?</h6>
+            <p>We offer free cancellation up to 30 days before departure. Cancellations within 30 days may incur a partial charge depending on the package and supplier terms.</p>
+          </div>
+          <div class="faq-item">
+            <h6>Do your packages include flights?</h6>
+            <p>Most of our packages include return flights. Some are land-only, which is clearly marked. We can also add flights to any land-only package upon request.</p>
+          </div>
+          <div class="faq-item">
+            <h6>Is travel insurance included?</h6>
+            <p>We strongly recommend travel insurance and can arrange comprehensive coverage for you as part of your booking. It covers medical emergencies, trip cancellations, and more.</p>
+          </div>
+          <div class="faq-item">
+            <h6>How quickly will you respond to my enquiry?</h6>
+            <p>We aim to respond to all enquiries within 24 hours during working days. For urgent matters, please call our phone line for an immediate response.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Subcribe">
+      <div class="container">
+        <h3>Stay Connected</h3>
+        <p class="sub-title stitle">Get exclusive travel deals, destination guides, and inspiration delivered to your inbox.</p>
+        <div class="subdata">
+          <form action="" class="subForm">
+            <input type="email" name="email" placeholder="Enter your email address">
+            <input type="submit" value="Subscribe" class="btn">
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="assets/image/logo2.png" alt="Travosca" class="footer-brand-logo">
+          <p>We believe travel is the best investment you can make in yourself. Let us plan your next unforgettable adventure.</p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="packages.html">Packages</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Top Destinations</h5>
+          <ul>
+            <li><a href="destinations.html">Bali, Indonesia</a></li>
+            <li><a href="destinations.html">Paris, France</a></li>
+            <li><a href="destinations.html">Switzerland</a></li>
+            <li><a href="destinations.html">Thailand</a></li>
+            <li><a href="destinations.html">Singapore</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact Info</h5>
+          <ul>
+            <li><a href="#"><i class="fa-solid fa-location-dot"></i>732 Despard St, Atlanta</a></li>
+            <li><a href="#"><i class="fa-solid fa-phone"></i>+97 888 8888</a></li>
+            <li><a href="#"><i class="fa-solid fa-envelope"></i>info@travosca.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2025 <span>Travosca</span>. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const h = document.getElementById('header');
+      if(window.scrollY > 60) h.classList.add('scrolled'); else h.classList.remove('scrolled');
+    });
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = this.querySelector('.submit-btn');
+      btn.innerHTML = '<i class="fa-solid fa-check" style="margin-right:1rem;"></i> Message Sent!';
+      btn.style.background = '#22c55e';
+      setTimeout(() => {
+        btn.innerHTML = '<i class="fa-solid fa-paper-plane" style="margin-right:1rem;"></i> Send Message';
+        btn.style.background = '';
+        this.reset();
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
